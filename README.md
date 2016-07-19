@@ -3,7 +3,7 @@ Requirements
 
 Using [Markov Algorithm](https://en.wikipedia.org/wiki/Markov_algorithm) please solve the following exercise:
 
-Please create a word puzzle solver, using the information loaded form the following files:
+Please create a word puzzle solver, using the information loaded from the following files, in JSON, XML or both:
 
 -   **Cypher**: Contains a list with the strings to be solved with  Markov Algorithm
 -   **Rules**: Contains a list with the rules that will be used in Markov Algorithm
