@@ -13,9 +13,9 @@ Please create a word puzzle solver, using the information loaded from the files 
         -   **isTermination**: Whether the rule should be last one to be executed
     -   **Words**: This file contains a list of the possible Word matches inside the Word puzzle
 
-- \[\*\] *Cypher ID* corresponds to it's position in the array from the cypher file
-- \[\*\*\] *Rule ID* corresponds to it's position in the array from the rule file
-- \[\*\*\*\] *Node ID* corresponds to the it's position in the array from the values file and is directly related to the Cypher ID
+\[\*\] *Cypher ID* corresponds to it's position in the array from the cypher file  
+\[\*\*\] *Rule ID* corresponds to it's position in the array from the rule file  
+\[\*\*\*\] *Node ID* corresponds to the it's position in the array from the values file and is directly related to the Cypher ID  
 
 2.  Based on the result from the previous point design and implement an algorithm to find the provided words in the puzzle matrix using the following criteria:
 
