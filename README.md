@@ -5,9 +5,9 @@ Please create a word puzzle solver, using the information loaded from the files 
 
 1.  Using the set of rules and values implement a solution based on  [Markov Algorithm](https://en.wikipedia.org/wiki/Markov_algorithm)  to generate a word matrix for the puzzle
 
-    -   **Cypher**: Contains a list with the strings to be solved with  Markov Algorithm
-    -   **Rules**: Contains a list with the rules that will be used in Markov Algorithm
-    -   **Values**: Contains a list which has a set of rules that must be applied to the character list, where “input” is the text that will be deciphered with Markov Algorithm and “constraints” where each node has the following values:
+    -   **Cypher**: Contains a list with the strings to be solved with  Markov Algorithm (For reference: the cypher ID corresponds to it's position in the array)
+    -   **Rules**: Contains a list with the rules that will be used in Markov Algorithm (For reference: the rule ID corresponds to it's position in the array)
+    -   **Values**: Contains a list which has a set of rules that must be applied to the character list, where “input” is the text that will be deciphered with Markov Algorithm and “constraints” where each node has the following values (For reference: The node ID corresponds to the it's position in the array and is directly related to the cypher ID):
         -   **Order**: Represents the order in which the rules will be executed
         -   **Rule**: Contains the ID of the rule that has to be used
         -   **isTermination**: Whether the rule should be last one to be executed
