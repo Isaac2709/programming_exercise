@@ -21,9 +21,14 @@ Exercises
     * *rule*: Determines the index of the rule in "base" list
     * *isTermination*: Determines wether the execution should continue or be halted
 
-  Using base and values please generate a rule sequence which will be used to solve the cypher using your Markov implementation.
+  Using base and values please generate a rule sequence which will be used to solve the cypher using your Markov implementation, taking into account the following statements:
+  
+  * The rule sequence must be in ascending order using each node's "order" value
+  * The rule values must be fetched from "base" using rule as the index of the list
+  * cypher and values have the same length, this means that cypher index should match the rule sequence list index.
 
-  For the ***output*** a word matrix print is expected
+
+  For the ***output*** a word matrix print is expected.
 
   ===
 2. **Word Puzzle** [*Required*]
