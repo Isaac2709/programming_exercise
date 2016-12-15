@@ -12,7 +12,7 @@ Exercises
 
 1. **Markov Algorithm** [*Required*]
 
-  Implement a solution of Markov's Algorithm that generates a word matrix using a set of rules and values given by the following files:
+  Create a solution using [Markov Algorithm](https://en.wikipedia.org/wiki/Markov_algorithm)  that generates a word matrix using a set of rules and values given by the following files:
 
   cypher: Constains a list strings (size N) that need to be decyphered
   base: Contains a list (size M) with the base rules that will be used in Markov's algorithm.
