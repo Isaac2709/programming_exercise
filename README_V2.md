@@ -14,12 +14,12 @@ Exercises
 
   Create a solution using [Markov Algorithm](https://en.wikipedia.org/wiki/Markov_algorithm)  that generates a word matrix using a set of rules and values given by the following files:
 
-  cypher: Constains a list strings (size N) that need to be decyphered
-  base: Contains a list (size M) with the base rules that will be used in Markov's algorithm.
-  values: Contains a list of objects (size N), in which one each node has the following form:
-    order: Determines the order in which one the rules should be executed
-    rule: Determines the index of the rule in "base" list
-    isTermination: Determines wether the execution should continue or be halted
+  * **cypher**: Constains a list strings (size N) that need to be decyphered
+  * **base**: Contains a list (size M) with the base rules that will be used in Markov's algorithm.
+  * **values**: Contains a list of objects (size N), in which one each node has the following form:
+    * *order*: Determines the order in which one the rules should be executed
+    * *rule*: Determines the index of the rule in "base" list
+    * *isTermination*: Determines wether the execution should continue or be halted
 
   Using base and values please generate a rule sequence which will be used to solve the cypher using your Markov implementation.
 
