@@ -4,8 +4,8 @@ Instructions
 * You are expected to come up with a solution for at least 2 different problems using the files provided in this repository.
 * Functionality, design and implementation of the solution will be evaluated.
 * Use any of the available files (JSON, XML or both) as your source.
-* HR will provide further instructions in which language to use, as well as additional details.
 * Minimal requirements for the output of each exercise are expected, feel free to add any additional console or graphic representation you consider might be useful
+* The core functionality and minimum requirements must be coded in C#
 
 Exercises
 =========
@@ -96,3 +96,6 @@ Exercises
   | R   | L   | [**B**](#) | X     | [**N**](#) | R     | L   |
   | B   | T   | Y     | U     | C     | O     | X   |
   |     |     |       |       |       |       |     |
+
+===
+Please send your solution to recruitmentcr@gft.com with the subject ***.NET Exercise - Full Name***, and attach the programming exercise as ***full-name-net.zip***
