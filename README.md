@@ -68,4 +68,4 @@ For the output at least a JSON with the following format is expected, although a
     ]
 }]
 ```
-Please send your solution to recruitmentcr@gft.com with the subject ***.NET Exercise - Full Name***, and attach the programming exercise as ***full-name-net.zip***
+Please send your solution to adriana.astua@gft.com with the subject ***.NET Exercise - Full Name***, and attach the programming exercise as ***full-name-net.zip***
