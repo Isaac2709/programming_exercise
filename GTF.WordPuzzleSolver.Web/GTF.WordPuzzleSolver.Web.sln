@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GTF.WordPuzzleSolver.Web", "GTF.WordPuzzleSolver.Web\GTF.WordPuzzleSolver.Web.csproj", "{A6F0AA3D-4984-4B13-8F78-4E1832C51DFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{F266E578-9D32-4B75-810A-39AA93183A73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{34551799-8E65-4027-A21B-383F6A05A7FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{039010D7-1115-4C66-A65E-08C0E5DB61E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Infrastructure", "{38C58A1B-F946-4473-B6BB-3F8F2E8488B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GTF.WordPuzzleSover.Application", "GTF.WordPuzzleSover.Application\GTF.WordPuzzleSover.Application.csproj", "{35CA8D2E-120E-4E7B-8A16-317C47D6B46B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTF.WordPuzzleSolver.Domain.Entities", "GTF.WordPuzzleSolver.Domain.Entities\GTF.WordPuzzleSolver.Domain.Entities.csproj", "{591B052E-93D0-4952-B6E0-A677BF6C9938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTF.WordPuzzleSolver.Infrastructure.DataAccess", "GTF.WordPuzzleSolver.Infrastructure.DataAccess\GTF.WordPuzzleSolver.Infrastructure.DataAccess.csproj", "{B024E0EE-94D0-4475-862C-2CBE92503641}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6F0AA3D-4984-4B13-8F78-4E1832C51DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F0AA3D-4984-4B13-8F78-4E1832C51DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F0AA3D-4984-4B13-8F78-4E1832C51DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F0AA3D-4984-4B13-8F78-4E1832C51DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35CA8D2E-120E-4E7B-8A16-317C47D6B46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CA8D2E-120E-4E7B-8A16-317C47D6B46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CA8D2E-120E-4E7B-8A16-317C47D6B46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CA8D2E-120E-4E7B-8A16-317C47D6B46B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591B052E-93D0-4952-B6E0-A677BF6C9938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591B052E-93D0-4952-B6E0-A677BF6C9938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591B052E-93D0-4952-B6E0-A677BF6C9938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591B052E-93D0-4952-B6E0-A677BF6C9938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B024E0EE-94D0-4475-862C-2CBE92503641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B024E0EE-94D0-4475-862C-2CBE92503641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B024E0EE-94D0-4475-862C-2CBE92503641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B024E0EE-94D0-4475-862C-2CBE92503641}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6F0AA3D-4984-4B13-8F78-4E1832C51DFF} = {F266E578-9D32-4B75-810A-39AA93183A73}
+		{35CA8D2E-120E-4E7B-8A16-317C47D6B46B} = {34551799-8E65-4027-A21B-383F6A05A7FA}
+		{591B052E-93D0-4952-B6E0-A677BF6C9938} = {039010D7-1115-4C66-A65E-08C0E5DB61E5}
+		{B024E0EE-94D0-4475-862C-2CBE92503641} = {38C58A1B-F946-4473-B6BB-3F8F2E8488B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D67FEFC4-7E86-4EC7-9FA2-F12E609B0918}
+	EndGlobalSection
+EndGlobal
