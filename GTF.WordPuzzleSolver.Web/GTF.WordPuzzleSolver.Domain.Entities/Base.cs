@@ -4,11 +4,26 @@ namespace GTF.WordPuzzleSolver.Domain.Entities
 {
     [DataContract]
     public class Base
-    {        
-        [DataMember]
-        string Source { get; set; }
+    {
+        private static int NextId = 0;
+
+        public Base()
+        {
+            Id = NextId++;
+        }
+
+        public static void ResetNextId(int startId)
+        {
+            NextId = startId;
+        }
 
         [DataMember]
-        string Replacement { get; set; }
+        public int Id { get; private set; }
+
+        [DataMember]
+        public string Source { get; set; }
+
+        [DataMember]
+        public string Replacement { get; set; }
     }
 }

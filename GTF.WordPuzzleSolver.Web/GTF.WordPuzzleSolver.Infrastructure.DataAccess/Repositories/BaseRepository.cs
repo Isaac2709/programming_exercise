@@ -11,7 +11,7 @@ namespace GTF.WordPuzzleSolver.Infrastructure.DataAccess.Repositories
             using (StreamReader r = new StreamReader(jsonPath))
             {
                 string json = r.ReadToEnd();
-                IList<TRequest> items = JsonConvert.DeserializeObject<IList<TRequest>>(json);
+                IList<TRequest> items = JsonConvert.DeserializeObject<IList<TRequest>>(json);                
 
                 return items;
             }
