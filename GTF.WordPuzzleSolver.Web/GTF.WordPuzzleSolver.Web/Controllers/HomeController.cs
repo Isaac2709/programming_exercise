@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GTF.WordPuzzleSolver.Web.Models;
 using GTF.WordPuzzleSover.Application.Services;
@@ -34,7 +30,7 @@ namespace GTF.WordPuzzleSolver.Web.Controllers
         [HttpPost]
         public IActionResult GetWord([FromBody]string word)
         {
-            var breakdown = _service.GetWordLocation(word);
+            var breakdown = _service.SearchWord(word);
             var response = new
             {
                 Word = word,
@@ -42,20 +38,6 @@ namespace GTF.WordPuzzleSolver.Web.Controllers
             };
 
             return Json(response);
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
         }
 
         public IActionResult Error()

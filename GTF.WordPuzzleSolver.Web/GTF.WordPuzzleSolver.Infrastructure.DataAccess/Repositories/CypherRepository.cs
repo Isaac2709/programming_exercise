@@ -1,11 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace GTF.WordPuzzleSolver.Infrastructure.DataAccess.Repositories
 {
     public class CypherRepository : BaseRepository
     {
-        public IList<string> LoadData(string jsonPath = "C:\\Users\\isaac\\source\\repos\\programming_exercise\\files\\json\\cypher.json")
+        private readonly string _defaultFilePath;
+
+        public CypherRepository()
         {
+            _defaultFilePath = $"{Environment.CurrentDirectory}\\Resources\\cypher.json";
+        }
+
+        public IList<string> LoadData(string jsonPath = "")
+        {
+            if (string.IsNullOrEmpty(jsonPath))
+            {
+                jsonPath = _defaultFilePath;
+            }
             var cypher = base.LoadData<string>(jsonPath);
 
             return cypher;

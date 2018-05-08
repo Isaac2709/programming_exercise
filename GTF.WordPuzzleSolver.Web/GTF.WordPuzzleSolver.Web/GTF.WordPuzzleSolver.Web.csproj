@@ -16,4 +16,8 @@
     <ProjectReference Include="..\GTF.WordPuzzleSover.Application\GTF.WordPuzzleSover.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
 </Project>

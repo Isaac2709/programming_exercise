@@ -1,11 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace GTF.WordPuzzleSolver.Infrastructure.DataAccess.Repositories
 {
     public class WordsRepository : BaseRepository
     {
-        public IList<string> LoadData(string jsonPath = "C:\\Users\\isaac\\source\\repos\\programming_exercise\\files\\json\\words.json")
+        private readonly string _defaultFilePath;
+
+        public WordsRepository()
         {
+            _defaultFilePath = $"{Environment.CurrentDirectory}\\Resources\\words.json";
+        }
+
+        public IList<string> LoadData(string jsonPath = "")
+        {
+            if (string.IsNullOrEmpty(jsonPath))
+            {
+                jsonPath = _defaultFilePath;
+            }
+
             var words = base.LoadData<string>(jsonPath);
 
             return words;

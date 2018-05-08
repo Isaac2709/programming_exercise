@@ -1,6 +1,11 @@
 ﻿var WordMatrix = (function () {
     var initialize = function () {
         $("span.word").on("click", searchWord);
+        $("span.word").hover(function () {
+            $(this).css("font-weight", "bold").css("cursor", "pointer");
+        }).mouseleave(function () {
+            $(this).css("font-weight", "normal").css("cursor", "normal");
+        });
     };
 
     var searchWord = function () {
@@ -13,8 +18,13 @@
             dataType: "json",
             contentType: 'application/json; charset=utf-8',
             success: function (response) {
-                _drawWordInMatrix(response);
-                alert(JSON.stringify(data));
+                if (response.breakdown != null) {
+                    _drawWordInMatrix(response);
+                    alert(JSON.stringify(response));
+                }
+                else {
+                    alert("The word was not found.");
+                }
             },
             error: function () {
                 alert("Error consulting the service, please try again.");

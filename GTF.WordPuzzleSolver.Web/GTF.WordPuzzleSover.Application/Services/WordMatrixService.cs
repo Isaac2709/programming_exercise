@@ -1,10 +1,7 @@
 ﻿using GTF.WordPuzzleSolver.Domain.Entities;
 using GTF.WordPuzzleSolver.Infrastructure.DataAccess.Repositories;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace GTF.WordPuzzleSover.Application.Services
 {
@@ -60,7 +57,7 @@ namespace GTF.WordPuzzleSover.Application.Services
             return matrix;
         }
 
-        public IList<dynamic> GetWordLocation(string word)
+        public IList<dynamic> SearchWord(string word)
         {
             for (var row = 0; row < matrix.Matrix.Count; row++)
             {
@@ -70,8 +67,8 @@ namespace GTF.WordPuzzleSover.Application.Services
                     if (currentLetter == word[0])
                     {
                         var matrixPositions = new int[] { row, column };
-                        var recorded = FindAdjacentLetter(word, 1, matrixPositions, new List<dynamic>());
-                        if(recorded.Count == word.Length)
+                        var recorded = SearchAdjacentLetter(word, 1, matrixPositions, new List<dynamic>());
+                        if (recorded.Count == word.Length)
                         {
                             return recorded;
                         }
@@ -81,7 +78,7 @@ namespace GTF.WordPuzzleSover.Application.Services
             return null;
         }
 
-        private IList<dynamic> FindAdjacentLetter(string word, int letterPosition, int[] matrixPositions, IList<dynamic> matrixRecorded)
+        private IList<dynamic> SearchAdjacentLetter(string word, int letterPosition, int[] matrixPositions, IList<dynamic> matrixRecorded)
         {
             var breakdown = new
             {
@@ -95,6 +92,7 @@ namespace GTF.WordPuzzleSover.Application.Services
             {
                 return matrixRecorded;
             }
+
             var left = new int[] { matrixPositions[0] - 1, matrixPositions[1] };
             var right = new int[] { matrixPositions[0] + 1, matrixPositions[1] };
             var top = new int[] { matrixPositions[0], matrixPositions[1] - 1 };
@@ -105,37 +103,42 @@ namespace GTF.WordPuzzleSover.Application.Services
             var rightBottom = new int[] { matrixPositions[0] + 1, matrixPositions[1] + 1 };
             var letter = word[letterPosition];
 
-            if (left[0] > 0 && letter == matrix.Matrix[left[0]][left[1]])
+            if (left[0] >= 0 && letter == matrix.Matrix[left[0]][left[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, left, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, left, matrixRecorded);
             }
-            else if (right[0] < matrix.Matrix.Count && letter == matrix.Matrix[right[0]][right[1]])
+            if (right[0] < matrix.Matrix.Count && letter == matrix.Matrix[right[0]][right[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, right, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, right, matrixRecorded);
             }
-            else if (top[1] > 0 && letter == matrix.Matrix[top[0]][top[1]])
+            if (top[1] >= 0 && letter == matrix.Matrix[top[0]][top[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, top, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, top, matrixRecorded);
             }
-            else if (bottom[1] < matrix.Matrix[bottom[0]].Count && letter == matrix.Matrix[bottom[0]][bottom[1]])
+            if (bottom[1] < matrix.Matrix[bottom[0]].Count && letter == matrix.Matrix[bottom[0]][bottom[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, bottom, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, bottom, matrixRecorded);
             }
-            else if (leftTop[0] > 0 && leftTop[1] > 0 && letter == matrix.Matrix[leftTop[0]][leftTop[1]])
+            if (leftTop[0] >= 0 && leftTop[1] >= 0 && letter == matrix.Matrix[leftTop[0]][leftTop[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, leftTop, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, leftTop, matrixRecorded);
             }
-            else if (leftBottom[0] > 0 && leftBottom[1] < matrix.Matrix[leftBottom[0]].Count && letter == matrix.Matrix[leftBottom[0]][leftBottom[1]])
+            if (leftBottom[0] >= 0 && leftBottom[1] < matrix.Matrix[leftBottom[0]].Count && letter == matrix.Matrix[leftBottom[0]][leftBottom[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, leftBottom, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, leftBottom, matrixRecorded);
             }
-            else if (rightTop[0] < matrix.Matrix.Count && rightTop[1] > 0 && letter == matrix.Matrix[rightTop[0]][rightTop[1]])
+            if (rightTop[0] < matrix.Matrix.Count && rightTop[1] >= 0 && letter == matrix.Matrix[rightTop[0]][rightTop[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, rightTop, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, rightTop, matrixRecorded);
             }
-            else if (rightBottom[0] < matrix.Matrix.Count && rightBottom[1] < matrix.Matrix[rightBottom[0]].Count && letter == matrix.Matrix[rightBottom[0]][rightBottom[1]])
+            if (rightBottom[0] < matrix.Matrix.Count && rightBottom[1] < matrix.Matrix[rightBottom[0]].Count && letter == matrix.Matrix[rightBottom[0]][rightBottom[1]])
             {
-                return FindAdjacentLetter(word, letterPosition + 1, rightBottom, matrixRecorded);
+                SearchAdjacentLetter(word, letterPosition + 1, rightBottom, matrixRecorded);
+            }
+
+            if (matrixRecorded.Count != word.Length)
+            {
+                matrixRecorded.RemoveAt(matrixRecorded.Count - 1);
             }
 
             return matrixRecorded;

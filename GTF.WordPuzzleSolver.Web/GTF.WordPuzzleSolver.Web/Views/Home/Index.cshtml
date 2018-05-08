@@ -5,12 +5,18 @@
 <br />
 <div class="container">
     <div class="row">
-        @foreach (var word in Model.Words)
-        {
-            <div class="col-sm-2 col-xs-6">
-                <span class="word">@word</span>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="row">
+                    @foreach (var word in Model.Words)
+                    {
+                        <div class="col-sm-2 col-xs-6">
+                            <span class="word">@word</span>
+                        </div>
+                    }
+                </div>
             </div>
-        }
+        </div>
     </div>
     <div class="row">
         <div class="col-md-10">
