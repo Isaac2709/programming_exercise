@@ -15,7 +15,7 @@ namespace GTF.WordPuzzleSover.Application.Services
         private readonly WordsRepository _wordsRepository;
         private readonly CypherRepository _cypherRepository;
 
-        private WordMatrix matrix;
+        private static WordMatrix matrix;
 
         public WordMatrixService()
         {
